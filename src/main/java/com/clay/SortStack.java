@@ -2,8 +2,6 @@ package com.clay;
 
 import java.util.Stack;
 
-import javax.swing.text.StyleConstants;
-
 /**
  * SortStack
  */
@@ -35,5 +33,19 @@ public class SortStack {
 
     public void sort(Stack<Integer> stack) {
         
+    }
+
+    public static void sortStackByStack(Stack<Integer> stack) {
+        Stack<Integer> help = new Stack<Integer>();
+        while (!stack.isEmpty()) {
+            int cur = stack.pop();
+            while (!help.isEmpty() && help.peek() > cur) {
+                stack.push(help.pop());
+            }
+            help.push(cur);
+        }
+        while (!help.isEmpty()) {
+            stack.push(help.pop());
+        }
     }
 }
