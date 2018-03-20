@@ -24,7 +24,7 @@ public class Account {
     }
 
     public boolean isValid() {
-
+        return true;
     }
 
     public boolean save() {
