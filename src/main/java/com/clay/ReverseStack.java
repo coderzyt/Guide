@@ -1,6 +1,14 @@
 package com.clay;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.Stack;
+import java.util.TreeSet;
 
 /**
  * ReverseStack
@@ -49,5 +57,10 @@ public class ReverseStack {
         // System.out.println(ReverseStack.getLastAndRemoveElement(stack));
         reverse(stack);
         System.out.println(stack);
+        Set<String> stringHashSet = new HashSet<String>();
+        Set<String> stringTreeSet = new TreeSet<String>();
+        List<String> stringArrayList = new ArrayList<String>();
+        List<String> stringLinkedList = new LinkedList<String>();
+        Map<String, String> stringHashMap = new HashMap<>();
     }
 }
