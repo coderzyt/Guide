@@ -1,5 +1,7 @@
 package main.java.com.clay;
 
+import java.lang.ref.SoftReference;
+
 /**
  * Address
  */

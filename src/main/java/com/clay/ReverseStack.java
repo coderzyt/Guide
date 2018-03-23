@@ -62,5 +62,6 @@ public class ReverseStack {
         List<String> stringArrayList = new ArrayList<String>();
         List<String> stringLinkedList = new LinkedList<String>();
         Map<String, String> stringHashMap = new HashMap<>();
+        Thread.yield();
     }
 }
