@@ -1,4 +1,4 @@
-package main.java.com.clay;
+package com.clay;
 
 /**
  * Leaf

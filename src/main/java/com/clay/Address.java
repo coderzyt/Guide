@@ -1,5 +1,4 @@
-package main.java.com.clay;
-
+package com.clay;
 import java.lang.ref.SoftReference;
 
 /**
@@ -17,7 +16,7 @@ public class Address {
     public Address(String add, String cty, String st) {
         this.address = add;
         this.city = cty;
-        this.st = st;
+        this.state = st;
     }
 
     public String getAddress() {
@@ -40,8 +39,6 @@ public class Address {
     }
 
     public boolean save() {
-        FileUtil fileUtil = new FileUtil();
-        String dataLine = getAddress() + ", " + getCity() + ", " + getState();
-        return fileUtil.writeToFile(ADDRESS_DATA_FILE, true, true);
+        return true;
     }
 }

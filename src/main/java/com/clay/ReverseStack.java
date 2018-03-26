@@ -15,6 +15,8 @@ import java.util.TreeSet;
  */
 public class ReverseStack {
 
+    private ThreadLocal<Integer> threadLocal = new ThreadLocal<Integer>();
+
     private Stack<Integer> stack;
 
     public ReverseStack() {
@@ -48,20 +50,29 @@ public class ReverseStack {
         }
     }
 
+    public int getCount() {
+        return threadLocal.get();
+    }
+
+    public void setCount(int value) {
+        threadLocal.set(value);
+    }
+
     public static void main(String[] args) {
-        Stack<Integer> stack = new Stack<Integer>();
-        stack.push(1);
-        stack.push(2);
-        stack.push(3);
-        stack.push(4);
-        // System.out.println(ReverseStack.getLastAndRemoveElement(stack));
-        reverse(stack);
-        System.out.println(stack);
-        Set<String> stringHashSet = new HashSet<String>();
-        Set<String> stringTreeSet = new TreeSet<String>();
-        List<String> stringArrayList = new ArrayList<String>();
-        List<String> stringLinkedList = new LinkedList<String>();
-        Map<String, String> stringHashMap = new HashMap<>();
-        Thread.yield();
+        System.out.println((new ReverseStack()).getCount());
+        // Stack<Integer> stack = new Stack<Integer>();
+        // stack.push(1);
+        // stack.push(2);
+        // stack.push(3);
+        // stack.push(4);
+        // // System.out.println(ReverseStack.getLastAndRemoveElement(stack));
+        // reverse(stack);
+        // System.out.println(stack);
+        // Set<String> stringHashSet = new HashSet<String>();
+        // Set<String> stringTreeSet = new TreeSet<String>();
+        // List<String> stringArrayList = new ArrayList<String>();
+        // List<String> stringLinkedList = new LinkedList<String>();
+        // Map<String, String> stringHashMap = new HashMap<>();
+        // Thread.yield();
     }
 }

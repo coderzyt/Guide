@@ -1,5 +1,4 @@
-package main.java.com.clay;
-
+package com.clay;
 /**
  * Account
  */
@@ -28,9 +27,7 @@ public class Account {
     }
 
     public boolean save() {
-        FileUtil futil = new FileUtil();
-        String dataLine = getLastName() + ", " + getFirstName(); 
-        return futil.writeToFile(ACCOUNT_DATE_FILE, dataLine, true, true);
+        return true;
     }
 }
 
