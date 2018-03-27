@@ -1,18 +1,15 @@
 package com.clay;
 
 /**
- * MyQuick3way1
+ * Quick3way
  */
-public class MyQuick3way1 {
-
-    public static void sort(Comparable[] a) {
-        sort(a, 0, a.length - 1);
-    }
+public class Quick3way {
 
     private static void sort(Comparable[] a, int lo, int hi) {
         if (hi <= lo + 10) {
             Insertion.sort(a);
         }
+
         int lt = lo, i = lo + 1, gt = hi;
         Comparable v = a[lo];
         while (i <= gt) {
@@ -27,7 +24,9 @@ public class MyQuick3way1 {
                 i++;
             }
         }
-        
+
+        sort(a, lo, lt - 1);
+        sort(a, gt + 1, hi);
     }
 
     private static void exch(Comparable[] a, int i, int j) {

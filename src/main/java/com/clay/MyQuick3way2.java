@@ -1,9 +1,9 @@
 package com.clay;
 
 /**
- * MyQuick3way1
+ * MyQuick3way2
  */
-public class MyQuick3way1 {
+public class MyQuick3way2 {
 
     public static void sort(Comparable[] a) {
         sort(a, 0, a.length - 1);
@@ -27,7 +27,7 @@ public class MyQuick3way1 {
                 i++;
             }
         }
-        
+        sort
     }
 
     private static void exch(Comparable[] a, int i, int j) {
