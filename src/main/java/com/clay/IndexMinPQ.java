@@ -5,10 +5,10 @@ package com.clay;
  */
 public class IndexMinPQ<Item extends Comparable> {
 
-    private Item[] indexMinPQ;
+    private Item[] pq;
 
     public IndexMinPQ(int maxN) {
-        indexMinPQ = (Item[]) new Comparable[maxN];
+        pq = (Item[]) new Comparable[maxN];
     }
 
     public void insert(int k, Item item) {
@@ -40,10 +40,10 @@ public class IndexMinPQ<Item extends Comparable> {
     }
 
     public boolean isEmpty() {
-
+        return pq.length == 0;
     }
 
     public int size() {
-        
+        return pq.length;
     }
 }
