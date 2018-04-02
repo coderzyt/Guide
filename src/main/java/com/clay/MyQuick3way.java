@@ -25,7 +25,7 @@ public class MyQuick3way {
             }
         }
         sort(a, lo, lt - 1);
-        sort(a, gt + 2, hi);
+        sort(a, gt + 1, hi);
     }
 
     private static boolean less(Comparable a, Comparable b) {

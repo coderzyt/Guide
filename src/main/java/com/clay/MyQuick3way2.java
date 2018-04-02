@@ -27,7 +27,8 @@ public class MyQuick3way2 {
                 i++;
             }
         }
-        sort
+        sort(a, lo, lt - 1);
+        sort(a, gt + 1, hi);
     }
 
     private static void exch(Comparable[] a, int i, int j) {
